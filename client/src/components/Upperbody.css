@@ -1,0 +1,104 @@
+.upperbody-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.upperbody-left,
+.upperbody-right {
+  flex: 1 1 320px;
+}
+
+/* Image styling with shadows and smooth hover scale */
+.product-image {
+  width: 100%;
+  max-width: 400px;  /* Adjust max-width to control size */
+  height: auto;
+  border-radius: 16px;
+  box-shadow:
+    0 8px 15px rgba(44, 62, 80, 0.2),
+    0 4px 6px rgba(44, 62, 80, 0.15);
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 15px 30px rgba(44, 62, 80, 0.35),
+    0 8px 12px rgba(44, 62, 80, 0.25);
+}
+
+/* Right side text */
+.upperbody-right h2 {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  color: #1e293b;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.upperbody-right p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: #475569;
+  max-width: 520px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Stylish buy button */
+.buy-button {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 0.85rem 2.5rem;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.5);
+  cursor: pointer;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  font-weight: 600;
+}
+
+.buy-button:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.75);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .upperbody-container {
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .upperbody-left,
+  .upperbody-right {
+    flex: 1 1 100%;
+  }
+
+  .upperbody-right h2 {
+    font-size: 2.25rem;
+  }
+
+  .upperbody-right p {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+
+  .product-image {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}
